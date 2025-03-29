@@ -2,6 +2,8 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Technologies from "./components/Technologies";
+import Project from "./components/Project";
+import Experience from "./components/Experience";
 
 const App = () => {
   return (
@@ -13,6 +15,8 @@ const App = () => {
         <Navbar/>
         <Hero/>
         <Technologies/>
+        <Project/>
+        <Experience/>
       </div>
     </div>
   );
