@@ -1,3 +1,3 @@
 git add .
-git commit -m " added project and experience section "
+git commit -m " added contacts and framer motion in elements section "
 git push
