@@ -1,6 +1,6 @@
 import React from "react";
 import { BiLogoPostgresql } from "react-icons/bi";
-import { FaNodeJs } from "react-icons/fa";
+import { FaNodeJs ,FaGitAlt ,FaGithub  } from "react-icons/fa";
 import { RiReactjsLine, RiTailwindCssFill } from "react-icons/ri";
 import { SiExpress, SiMongodb } from "react-icons/si";
 import { motion } from "framer-motion";
@@ -74,6 +74,21 @@ const Technologies = () => {
           className="p-4">
           <BiLogoPostgresql className="text-7xl text-sky-700" />
         </motion.div>
+        <motion.div 
+          initial="initial"
+          animate="animate"
+          variants={iconVariants(3)}
+          className="p-4">
+          <FaGitAlt className="text-7xl text text-orange-600" />
+        </motion.div>
+        <motion.div 
+          initial="initial"
+          animate="animate"
+          variants={iconVariants(2)}
+          className="p-4">
+          <FaGithub className="text-7xl text text-white"/>
+        </motion.div>
+
       </motion.div>
     </div>
   );

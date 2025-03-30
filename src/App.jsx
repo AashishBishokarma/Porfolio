@@ -1,4 +1,5 @@
 import React from "react";
+import {useEffect} from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Technologies from "./components/Technologies";
@@ -7,6 +8,17 @@ import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 
 const App = () => {
+  useEffect(() => {
+    // Restore scroll position on mount
+    window.scrollTo(0, sessionStorage.getItem("scrollPosition") || 0);
+
+    // Save scroll position before unmounting
+    const saveScroll = () => sessionStorage.setItem("scrollPosition", window.scrollY);
+    window.addEventListener("beforeunload", saveScroll);
+
+    return () => window.removeEventListener("beforeunload", saveScroll);
+  }, []);
+  
   return (
     <div className="overflow-x-hidden text-stone-300 antialiased">
       <div className="fixed inset-0 -z-10">

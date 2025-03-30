@@ -14,17 +14,20 @@ const Project = () => {
       </motion.h2>
       <div>
         {PROJECTS.map((project, index) => (
-          <div key={index} className='mb-8 flex flex-wrap lg:justify-center'>
+          <div key={index} className='mb-8 flex flex-wrap lg:justify-center lg:gap-6'>
             <motion.div 
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }} 
               transition={{ duration: 1 }}
               className="w-full lg:w-1/4">
+              <a href={project.projectlink} target="_blank" rel="noopener noreferrer">
               <img src={project.image}
               width={250}
               height={250}
               alt={project.title}
               className="mb-6 rounded"  />
+              </a>
+              
             </motion.div >
             <motion.div  
               initial={{ opacity: 0, x: 100 }}

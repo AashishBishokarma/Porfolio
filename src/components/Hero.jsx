@@ -65,12 +65,11 @@ const Home = () => {
 
             <motion.a 
               variants={ChildVarients}
-              href="/resume.pdf"
+              href="https://drive.google.com/file/d/11kqBQxbiWgCztJR3BapqSdSFFIOjfTi7/view?usp=sharing"
               target='_blank'
               rel="noopener noreferrer"
-              download
-              className="bg-white rounded-full p-4 text-sm text-stone-800 mb-10">
-              Download Resume
+              className="bg-white rounded-full p-4 text-sm text-stone-800 mb-10 hover:bg-black hover:text-white duration-300">
+              Preview Resume
               </motion.a>
           </motion.div>
         </div>
