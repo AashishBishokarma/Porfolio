@@ -1,3 +1,3 @@
 git add .
-git commit -m " editing contact section in elements section "
+git commit -m " editing logos section "
 git push

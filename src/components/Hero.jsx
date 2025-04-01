@@ -70,7 +70,7 @@ const Home = () => {
               rel="noopener noreferrer"
               className="bg-white rounded-full p-4 text-sm text-stone-800 mb-10 hover:bg-black hover:text-white duration-300">
               Preview Resume
-              </motion.a>
+            </motion.a>
           </motion.div>
         </div>
       </div>

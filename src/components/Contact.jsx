@@ -34,9 +34,13 @@ const Contact = () => {
           {CONTACT.email}
         </a>
       </div>
-      <div className="text-center tracking-tighter">
+      
         <form className="flex text-center flex-col justify-center gap-4 mt-10 w-1/2 mx-auto">
-          <div className="flex flex-col sm:flex-row lg:flex-col justify-between gap-4">
+          <motion.div 
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            className="flex flex-col sm:flex-row  justify-between gap-4">
             <input
               className="p-4 w-full sm:w-1/2 lg:w-full border-2 rounded-2xl border-white"
               type="text"
@@ -47,29 +51,37 @@ const Contact = () => {
               type="text"
               placeholder="Last Name"
             />
-          </div>
+          </motion.div>
 
-          <input
+          <motion.input
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
             className="p-4 border-2 rounded-2xl border-white"
             type="email"
             placeholder="Email"
             required
           />
-          <textarea
+          <motion.textarea
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
             className="p-4 border-2 rounded-2xl border-white"
             name="Message"
             placeholder="Message"
             id=""
             required
-          ></textarea>
-          <button
-            className="p-4 rounded-2xl bg-black text-white text- hover:bg-white hover:text-black border duration-300 ease-in-out"
+          ></motion.textarea>
+          <motion.button
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="p-4 rounded-2xl bg-gray-50 text-stone-900 border font-bold duration-300 ease-in-out hover:bg-black hover:text-white"
             type="Submit"
           >
-            SEND
-          </button>
+            SUBMIT            
+          </motion.button>
         </form>
-      </div>
     </div>
   );
 };

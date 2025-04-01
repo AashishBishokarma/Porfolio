@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from "../assets/raviKumarLogo.webp"
+import logo from "../assets/image.png"
 import { FaGithub, FaLinkedin} from 'react-icons/fa'
 import { SiLeetcode } from "react-icons/si";
 
