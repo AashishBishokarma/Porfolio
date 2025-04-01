@@ -1,6 +1,34 @@
 import React from "react";
 import { CONTACT } from "../constants";
 import { motion } from "framer-motion";
+import emailjs from '@emailjs/browser';
+
+const handleSubmit = (e) => {
+  e.preventdefault();
+
+  const serviceId = "service_tupgqgb";
+  const templateId = "service_tupgqgb";
+  const publicKey = "0k2iOqLVfAsZYWco2";
+
+  const templateParams = {
+    from_name : username,
+    from_email: email,
+    to_name: "Aashish Bishokarma",
+    message:message,
+  }
+
+  emailjs.send(serviceId, templateId, templateParams, publicKey)
+    .then((response) => {
+      console.log("Email sent successfully", response.status, response.text);
+      setName('');
+      setEmail('');
+      setMessage('');
+    })
+    .catch((error) => {
+      console.error("Error sending email", error);
+    });
+
+}
 
 const Contact = () => {
   return (
@@ -13,29 +41,11 @@ const Contact = () => {
       >
         Get in Touch
       </motion.h2>
-      <div className="text-center tracking-tighter">
-        <motion.p
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          className="my-4"
-        >
-          {CONTACT.address}
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0, x: 100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          className="my-4"
-        >
-          {CONTACT.phoneNo}
-        </motion.p>
-        <a href="#" className="border-b">
-          {CONTACT.email}
-        </a>
-      </div>
-      
-        <form className="flex text-center flex-col justify-center gap-4 mt-10 w-1/2 mx-auto">
+
+
+        <form 
+          onSubmit={handleSubmit}
+          className="flex text-center flex-col justify-center gap-4 mt-10 w-1/2 mx-auto">
           <motion.div 
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -45,6 +55,9 @@ const Contact = () => {
               className="p-4 w-full sm:w-1/2 lg:w-full border-2 rounded-2xl border-white"
               type="text"
               placeholder="First Name"
+              value={username}
+              onChange={(e) => setName(e.target.value)}
+              required
             />
             <input
               className="p-4 w-full sm:w-1/2 lg:w-full border-2 rounded-2xl border-white"
@@ -61,6 +74,8 @@ const Contact = () => {
             type="email"
             placeholder="Email"
             required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <motion.textarea
             initial={{ opacity: 0, x: -100 }}
