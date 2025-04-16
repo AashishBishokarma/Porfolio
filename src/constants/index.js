@@ -57,7 +57,7 @@ export const PROJECTS = [
     description: `Designed and developed a personal portfolio website using React.js and Vite to showcase technical skills, project experience, and professional background. The site is structured into clearly defined sections including an introduction, skillset, project highlights, internship experience, and a contact form. Integrated Framer Motion to deliver smooth, modern UI animations and enhance overall user experience. Implemented EmailJS for handling contact form submissions, enabling direct communication via personal email. The portfolio emphasizes responsive design, accessibility, and clean code practices, serving as a professional online presence and resume.`,
 
     technologies: ["React", "Vite", "Context API" , "React Router" , "Tailwind CSS","Framer Motion"],
-    projectlink: "porfolio-jade-pi.vercel.app",
+    projectlink: "https://porfolio-cw4aihikv-ashishs-projects-e7df4efa.vercel.app/",
   },
 ];
 
