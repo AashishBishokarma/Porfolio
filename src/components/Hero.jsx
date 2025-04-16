@@ -68,7 +68,7 @@ const Home = () => {
               href="https://drive.google.com/file/d/11kqBQxbiWgCztJR3BapqSdSFFIOjfTi7/view?usp=sharing"
               target='_blank'
               rel="noopener noreferrer"
-              className="bg-white rounded-full p-4 text-sm text-stone-800 mb-10 hover:bg-black hover:text-white duration-300">
+              className="bg-white rounded-full p-4 text-sm text-stone-800 mb-10 hover:bg-black hover:text-white duration-300 hover:border-white border-2">
               Preview Resume
             </motion.a>
           </motion.div>

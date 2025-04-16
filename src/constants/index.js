@@ -40,7 +40,7 @@ export const PROJECTS = [
     description:
       "Created a full-stack quiz web application designed to test users on various tech domains including frontend, backend, CyberSecurity, MachineLearning and DevOps. The app features a clean, responsive UI built with React and supports dynamic question rendering with a set of 10 questions per topic. After completion, users receive instant scoring and are ranked on a real-time scoreboard powered by Socket.io. Integrated MongoDB for storing user data and scores, and used Node.js with Express to manage backend operations and APIs.",
     technologies: ["React","Tailwind CSS", "Node.js", "Express", "MongoDB", "Socket.io"],
-    projectlink: "https://quizz-bebhmmz56-ashishs-projects-e7df4efa.vercel.app/",
+    projectlink: "https://quizz-app-dusky.vercel.app/",
   }
   ,
   {
@@ -49,7 +49,7 @@ export const PROJECTS = [
     description:
       "Developed a responsive e-commerce web application using React.js and Vite, ensuring fast performance and smooth user interactions. Integrated React Router for seamless navigation and utilized Context API for efficient global state management. Focused on creating a pixel-perfect UI, incorporating features like a product catalog, search functionality, login and signup pages, and a shopping cart. Ensured an optimal user experience across devices through responsive design and efficient data handling.",
     technologies: ["React", "Vite", "Context API" , "React Router" , "Tailwind CSS"],
-    projectlink: "https://ecommerce-cu41c532y-ashishs-projects-e7df4efa.vercel.app/",
+    projectlink: "https://ecommerce-taupe-six-54.vercel.app/",
   },
   {
     title: "Protfolio",
